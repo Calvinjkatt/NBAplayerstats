@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NBA Player Stats</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>NBA Player Stats Analyzer</h1>
+
+      <div class="search-section">
+        <input
+          type="text"
+          id="playerSearch"
+          placeholder="Search for a player..."
+        />
+        <div id="playerResults" class="results-container"></div>
+      </div>
+
+      <div class="team-section" style="display: none">
+        <h2>Select Team</h2>
+        <select id="teamSelect">
+          <option value="">Select a team...</option>
+        </select>
+      </div>
+
+      <div id="statsContainer" class="stats-container"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
